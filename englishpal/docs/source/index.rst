@@ -52,24 +52,22 @@ Methods and materials
 Results
 ======================================
 
-..snakefood.dot::
-  :strict digraph "dependencies" {
-  graph [
-  rankdir = "LR",
-  overlap = "scale",
-  size = "8,10",
-  ratio = "fill", 
-  fontsize = "16",
-  fontname = "Helvetica",
-  clusterrank = "local"
-  ]:
+snakefood.dot::
+       strict digraph "dependencies" {
+          graph [
+              rankdir = "LR",
+              overlap = "scale",
+              size = "8,10",
+              ratio = "fill",
+              fontsize = "16",
+              fontname = "Helvetica",
+              clusterrank = "local"
+              ]
 
-       node [
-           fontsize=12
-           shape=box
-       ];
-
-
+             node [
+                 fontsize=12
+                 shape=box
+             ];
       "difficulty.py"  [style=filled];
       "difficulty.py" -> "wordfreqCMD.py";
       "difficulty.py" -> "math";
@@ -105,7 +103,7 @@ Results
       "wordfreqCMD.py" -> "sys";
       "wordfreqCMD.py" -> "pickle_idea.py";
 
-
+依赖图
 
 .. image:: sfood.png
 

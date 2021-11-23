@@ -52,17 +52,17 @@ Methods and materials
 Results
 ======================================
 
-snakefood.dot::
-   strict digraph "dependencies" {
-    graph [
-        rankdir = "LR",
-        overlap = "scale",
-        size = "8,10",
-        ratio = "fill",
-        fontsize = "16",
-        fontname = "Helvetica",
-        clusterrank = "local"
-        ]
+..snakefood.dot::
+  :strict digraph "dependencies" {
+  graph [
+  rankdir = "LR",
+  overlap = "scale",
+  size = "8,10",
+  ratio = "fill", 
+  fontsize = "16",
+  fontname = "Helvetica",
+  clusterrank = "local"
+  ]:
 
        node [
            fontsize=12

@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Lab 1: Dependency Analysis and Dependency Graph
+**Lab 1**: Dependency Analysis and Dependency Graph
 ======================================
 
 .. toctree::
@@ -12,7 +12,7 @@ Lab 1: Dependency Analysis and Dependency Graph
 
 
 
-Indices and tables
+小组成员
 ==================
 
 * :ref:`genindex`
@@ -24,3 +24,6 @@ Indices and tables
 .. image:: mermaid.png
    
    
+项目地址: `EnglishPal`_.
+
+.. _EnglishPal: https://github.com/ChiefEye-official/Test/

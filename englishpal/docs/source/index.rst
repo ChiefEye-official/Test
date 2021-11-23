@@ -12,18 +12,20 @@
 
 
 
-小组成员
-==================
+**小组成员**
+-201932110105沈音棋
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
+项目地址: `EnglishPal`_.
+
+.. _EnglishPal: https://github.com/ChiefEye-official/Test/
+
+Abstract
+======================================
+找出EnglishPal中模块/类/函数之间的依赖关系，绘制依赖图，分析EnglishPal当前依赖关系利弊。
+
 
 .. image:: sfood.png
 
 .. image:: mermaid.png
    
-   
-项目地址: `EnglishPal`_.
-
-.. _EnglishPal: https://github.com/ChiefEye-official/Test/

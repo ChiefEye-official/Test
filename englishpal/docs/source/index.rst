@@ -13,12 +13,17 @@
 
 
 **小组成员**
--201932110105沈音棋
+
+201932110105沈音棋  201932110104马奕琪  201932110106孙仪杰  201932110107田西芷
 
 
-项目地址: `EnglishPal`_.
+项目GitHub地址: `EnglishPal`_.
 
 .. _EnglishPal: https://github.com/ChiefEye-official/Test/
+
+项目Read the Doc地址: `Read the Doc`_.
+
+.. _Read The Doc: https://readthedocs.org/projects/testenglishpal/
 
 Abstract
 ======================================

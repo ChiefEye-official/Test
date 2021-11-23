@@ -18,3 +18,9 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. image:: sfood.png
+
+.. image:: mermaid.png
+   
+   

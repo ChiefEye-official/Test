@@ -52,6 +52,62 @@ Methods and materials
 Results
 ======================================
 
+```
+
+strict digraph "dependencies" {
+    graph [
+        rankdir = "LR",
+        overlap = "scale",
+        size = "8,10",
+        ratio = "fill",
+        fontsize = "16",
+        fontname = "Helvetica",
+        clusterrank = "local"
+        ]
+
+       node [
+           fontsize=12
+           shape=box
+       ];
+
+
+"difficulty.py"  [style=filled];
+"difficulty.py" -> "wordfreqCMD.py";
+"difficulty.py" -> "math";
+"difficulty.py" -> "pickle.py";
+"main.py"  [style=filled];
+"main.py" -> "WordFreq.py";
+"main.py" -> "wordfreqCMD.py";
+"main.py" -> "UseSqlite.py";
+"main.py" -> "pickle_idea.py";
+"main.py" -> "pickle_idea2.py";
+"main.py" -> "os.py";
+"main.py" -> "random.py";
+"main.py" -> "glob.py";
+"main.py" -> "datetime.py";
+"main.py" -> "flask.py";
+"main.py" -> "difficulty.py";
+"pickle_idea.py"  [style=filled];
+"pickle_idea.py" -> "pickle.py";
+"pickle_idea.py" -> "datetime.py";
+"pickle_idea2.py"  [style=filled];
+"pickle_idea2.py" -> "pickle.py";
+"pickle_idea2.py" -> "datetime.py";
+"UseSqlite.py"  [style=filled];
+"UseSqlite.py" -> "sqlite3";
+"WordFreq.py"  [style=filled];
+"WordFreq.py" -> "wordfreqCMD.py";
+"WordFreq.py" -> "string.py";
+"wordfreqCMD.py"  [style=filled];
+"wordfreqCMD.py" -> "collections";
+"wordfreqCMD.py" -> "string.py";
+"wordfreqCMD.py" -> "operator.py";
+"wordfreqCMD.py" -> "os.py";
+"wordfreqCMD.py" -> "sys";
+"wordfreqCMD.py" -> "pickle_idea.py";
+
+```
+
 
 .. image:: sfood.png
 

@@ -233,7 +233,9 @@ wordfreqCMD将字符串转换为列表，得到每个单词的词频；wordFreq�
 
 ②pickle
 
-pickle_idea依赖于pickle，列表llist中的信息存储到字典中，记录单词和词频；pickle_idea2依赖于pickle，列表llist中的信息存储到字典中，记录单词和日期；将这些函数合并到wordfreqCMD.py中，wordfreqCMD依赖于pickle_idea，显示积累频率。
+pickle_idea依赖于pickle，列表llist中的信息存储到字典中，记录单词和词频；pickle_idea2依赖于pickle，列表llist中的信息存储到字典中，记录单词和日期；
+
+将这些函数合并到wordfreqCMD.py中，wordfreqCMD依赖于pickle_idea，显示积累频率。
 
 ③UseSqlite.py
 
@@ -241,12 +243,20 @@ Sqlite3Template 连接数据库；InsertQuery继承Sqlite3Template，插入数�
 
 ④Main.py
 
-获取文章get_today_article，依赖于RecordQuery数据记录、调用方法get_difficulty_level根据读者的阅读水平选择文章、根据pickle_idea2根据记录高亮生词；显示主页面mainpage，依赖于WordFreq、wordfreqCMD；问题与答案交互方法get_question_part、get_answer_part等；用户页面，勾选生词userpage，依赖于WordFreq、wordfreqCMD；单词熟悉度操作，包括load_freq_history；unfamiliar；familiar等；用户注册登录退出signup、login、logout、add_user依赖于InsertQuery。
+获取文章get_today_article，依赖于RecordQuery数据记录、调用方法get_difficulty_level根据读者的阅读水平选择文章、根据pickle_idea2根据记录高亮生词；
+
+显示主页面mainpage，依赖于WordFreq、wordfreqCMD；问题与答案交互方法get_question_part、get_answer_part等；
+
+用户页面，勾选生词userpage，依赖于WordFreq、wordfreqCMD；单词熟悉度操作，包括load_freq_history；unfamiliar；familiar等；
+
+用户注册登录退出signup、login、logout、add_user依赖于InsertQuery。
 
 架构利弊分析
 ======================================
 
-弊端：EnglishPal的主要页面与功能集中在main.py中，功能代码中嵌入了大量网页前端代码，前后端混杂。进行前后端分离的重构有助于解放前端，不需要向后台提供模板，或是在前端html中嵌入后台代码；提高工作效率，分工更加明确；局部性能提升，实现页面的按需加载，在页面交互和用户体验上有所提升；降低维护成本，快速定位问题所在。优点：前后端之间没有通信成本，功能清晰，无大量重复代码。使用适用于小型网站的Flask框架，使得项目灵活，可扩展性强，第三方库的选择多。
+**弊端**：EnglishPal的主要页面与功能集中在main.py中，功能代码中嵌入了大量网页前端代码，前后端混杂。进行前后端分离的重构有助于解放前端，不需要向后台提供模板，或是在前端html中嵌入后台代码；提高工作效率，分工更加明确；局部性能提升，实现页面的按需加载，在页面交互和用户体验上有所提升；降低维护成本，快速定位问题所在。
+
+**优点**：前后端之间没有通信成本，功能清晰，无大量重复代码。使用适用于小型网站的Flask框架，使得项目灵活，可扩展性强，第三方库的选择多。
 
 
 Discussion

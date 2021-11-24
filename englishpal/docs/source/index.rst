@@ -229,6 +229,7 @@ Results
 
 
 ①wordfreqCMD.py
+
 wordfreqCMD将字符串转换为列表，得到每个单词的词频；wordFreq依赖于wordfreqCMD，初始化文章；difficulty依赖于wordfreqCMD，计算文章的难度等级；main依赖于wordfreqCMD，有道的链接和按降序排列。
 
 ②pickle
@@ -244,11 +245,8 @@ Sqlite3Template 连接数据库；InsertQuery继承Sqlite3Template，插入数�
 ④Main.py
 
 获取文章get_today_article，依赖于RecordQuery数据记录、调用方法get_difficulty_level根据读者的阅读水平选择文章、根据pickle_idea2根据记录高亮生词；
-
 显示主页面mainpage，依赖于WordFreq、wordfreqCMD；问题与答案交互方法get_question_part、get_answer_part等；
-
 用户页面，勾选生词userpage，依赖于WordFreq、wordfreqCMD；单词熟悉度操作，包括load_freq_history；unfamiliar；familiar等；
-
 用户注册登录退出signup、login、logout、add_user依赖于InsertQuery。
 
 架构利弊分析

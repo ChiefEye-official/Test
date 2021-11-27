@@ -33,12 +33,12 @@ Abstract
 
 找出EnglishPal中模块/类/函数之间的依赖关系，绘制依赖图，分析EnglishPal当前依赖关系利弊。
 
-**Introduction**
+Introduction
 =================================================
 
 EnglishPal是智能捕捉阅读弱点，针对性提高用户的阅读水平的网站。提高用户的获取英文信息的速度与准确度。提供精选短文和生词簿，对于英语老师，English Pal 可以帮助掌握题目词汇规律，提高教学质量。对于英语学着，English Pal可以帮助迅速提高词汇，轻松应对各种考试。本次实验针对EnglishPal源代码，分析当前模块级依赖关系以及类/函数级依赖关系，分析当前体系结构。
 
-**Methods and materials**
+Methods and materials
 =================================================
 
 ①Snakefood：从Python代码中生成依赖，过滤，聚类，并从依赖列表中生成图表。使用Snakefood捕获模块级依赖关系。
@@ -47,7 +47,7 @@ EnglishPal是智能捕捉阅读弱点，针对性提高用户的阅读水平的�
 
 ③Mermaid：基于Javascript的图表和图表工具，使用文本和代码创建图表和可视化，以便动态地创建和修改图表。使用mermaid live editor渲染类/函数级依赖关系图。
 
-**Results**
+Results
 =================================================
 
 **snakefood.dot**
@@ -222,7 +222,7 @@ EnglishPal是智能捕捉阅读弱点，针对性提高用户的阅读水平的�
 
 .. image:: mermaid.png
 
-**依赖分析：**
+依赖分析：
 =================================================
 
 
@@ -247,7 +247,7 @@ Sqlite3Template 连接数据库；InsertQuery继承Sqlite3Template，插入数�
 用户页面，勾选生词userpage，依赖于WordFreq、wordfreqCMD；单词熟悉度操作，包括load_freq_history；unfamiliar；familiar等；
 用户注册登录退出signup、login、logout、add_user依赖于InsertQuery。
 
-**架构利弊分析**
+架构利弊分析
 =================================================
 
 **弊端**：EnglishPal的主要页面与功能集中在main.py中，功能代码中嵌入了大量网页前端代码，前后端混杂。进行前后端分离的重构有助于解放前端，不需要向后台提供模板，或是在前端html中嵌入后台代码；提高工作效率，分工更加明确；局部性能提升，实现页面的按需加载，在页面交互和用户体验上有所提升；降低维护成本，快速定位问题所在。
@@ -258,7 +258,7 @@ Sqlite3Template 连接数据库；InsertQuery继承Sqlite3Template，插入数�
 
 通过对EnglishPal的依赖关系分析，对EnglishPal的架构有了清晰的认知。学习使用snakefood生成模块级依赖关系snakefood.dot，并用graphviz渲染；用mermain绘制类/函数级依赖关系图。掌握对已有项目的结构和依赖关系分析方法，对项目重构有更深的认识。
 
-**References**
+References
 =================================================
 
 [1] Martin Blais, Snakefood User Manual, Copyright (C) 2001-2007
